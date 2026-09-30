@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="pink_utama">#FFF0F5</color>
+    <color name="tombol_utama">#FF69B4</color>
+    <color name="pink_judul">#8B0042</color>
+    <color name="pink_kotak_gizi">#FFE4E1</color>
+    <color name="abu_teks">#4A4A4A</color>
+</resources>

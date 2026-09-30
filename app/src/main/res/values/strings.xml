@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ILW-pocky</string>
+
+    <string name="teks_judul">SELAMAT DATANG </string>
+    <string name="judul_bawah">DI POCKY APP </string>
+    <string name="tombol_my_project">My Project</string>
+    <string name="kata_awal">semua senyum dimulai dari pocky </string>
+
+    <string name="judul_detail">Ragam Rasa dan \n Informasi Gizi Pocky</string>
+    <string name="teks_deskripsi">Pocky adalah camilan biskuit stik renyah yang dibalut krim manis lezat. Ujung stiknya sengaja dibuat polos tanpa krim supaya tangan kamu tidak cemong saat makan.
+                                    Pocky punya banyak pilihan rasa enak, seperti Strawberry, Cokelat, Matcha, dan Cookies dan Cream.</string>
+    <string name="teks_judul_gizi">Komposisi &amp; Nilai Gizi</string>
+    <string name="teks_gizi">Energi: sekitar 170–190 kkal. \n Lemak: sekitar 6–8 gram. \n Karbohidrat: sekitar 25–30 gram.
+        \n Gula: sekitar 12–16 gram. \n rotein: sekitar 3–4 gram. \n Natrium: sekitar 50–100 mg.</string>
+</resources>
