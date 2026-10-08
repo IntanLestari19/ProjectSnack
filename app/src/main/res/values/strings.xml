@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ILW-pocky</string>
+    <string name="app_sawit">Palmventoy</string>
 
     <string name="teks_judul">SELAMAT DATANG </string>
     <string name="judul_bawah">DI POCKY APP </string>
@@ -12,4 +13,51 @@
     <string name="teks_judul_gizi">Komposisi &amp; Nilai Gizi</string>
     <string name="teks_gizi">Energi: sekitar 170–190 kkal. \n Lemak: sekitar 6–8 gram. \n Karbohidrat: sekitar 25–30 gram.
         \n Gula: sekitar 12–16 gram. \n rotein: sekitar 3–4 gram. \n Natrium: sekitar 50–100 mg.</string>
+
+
+    <string name="tagline">Kelola Stok, Dukung Panen</string>
+    <string name="title_regis">Daftar Akun</string>
+    <string name="title_login">Masuk</string>
+    <string name="title_alat_panen">Alat Panen</string>
+    <string name="menu_search">Cari</string>
+    <string name="menu_settings">Pengaturan</string>
+
+    <string name="about_heading">Tentang Palmventory</string>
+    <string name="about_text">Palmventory adalah sistem informasi monitoring dan optimasi inventori untuk perkebunan kelapa sawit. Stok pupuk, alat panen, dan perlengkapan kebun tercatat rapi sehingga kekurangan maupun kelebihan barang dapat dicegah.</string>
+    <string name="fitur_heading">Fitur Utama</string>
+    <string name="f1_title">📦 Monitoring Stok</string>
+    <string name="f1_desc">Pantau jumlah dan kondisi stok barang kebun secara real-time.</string>
+    <string name="f2_title">📝 Pengajuan Barang</string>
+    <string name="f2_desc">Karyawan mengajukan kebutuhan, pemilik kebun menyetujui.</string>
+    <string name="f3_title">🛠️ Pengelolaan Barang</string>
+    <string name="f3_desc">Kelola data barang masuk, keluar, dan penggunaan.</string>
+    <string name="f4_title">🚚 Pesanan Supplier</string>
+    <string name="f4_desc">Buat pesanan dan pantau status pengiriman dari supplier.</string>
+    <string name="role_heading">Siapa yang Menggunakan?</string>
+    <string name="role1_info">👤 Pemilik Kebun: memantau stok dan menyetujui pengajuan</string>
+    <string name="role2_info">👷 Karyawan Kebun: mencatat dan mengajukan kebutuhan barang</string>
+    <string name="role3_info">🏭 Supplier: menerima pesanan dan memperbarui pengiriman</string>
+    <string name="btn_start">Mulai Sekarang</string>
+    <string name="btn_web">Lihat Alat Panen (Web)</string>
+
+    <string name="regis_heading">Buat Akun Baru</string>
+    <string name="regis_sub">Lengkapi data untuk mulai mengelola stok kebun</string>
+    <string name="hint_name">Nama lengkap</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Kata sandi</string>
+    <string name="hint_confirm">Ulangi kata sandi</string>
+    <string name="label_role">Daftar sebagai</string>
+    <string name="role_pemilik">Pemilik Kebun</string>
+    <string name="role_karyawan">Karyawan Kebun</string>
+    <string name="role_supplier">Supplier</string>
+    <string name="btn_regis">Daftar</string>
+    <string name="have_account">Sudah punya akun? </string>
+    <string name="to_login">Masuk</string>
+
+    <string name="login_heading">Selamat Datang Kembali</string>
+    <string name="login_sub">Masuk untuk melanjutkan ke Palmventory</string>
+    <string name="forgot">Lupa kata sandi?</string>
+    <string name="btn_login">Masuk</string>
+    <string name="no_account">Belum punya akun? </string>
+    <string name="to_regis">Daftar</string>
 </resources>

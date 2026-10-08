@@ -8,4 +8,16 @@
     <color name="pink_judul">#8B0042</color>
     <color name="pink_kotak_gizi">#FFE4E1</color>
     <color name="abu_teks">#4A4A4A</color>
+
+    <color name="primary_blue">#3E97FF</color>
+    <color name="primary_cyan">#19D3DA</color>
+    <color name="abu_muda">#E5E7EB</color>
+    <color name="biru_muda">#E8F4FF</color>
+    <color name="text_black">#1A1A1A</color>
+    <color name="text_gray">#6B7280</color>
+    <color name="logo_biru_tua">#0B4F9E</color>
+    <color name="logo_hijau">#2E9E4F</color>
+    <color name="logo_krem">#F3E3C3</color>
+    <color name="logo_oranye">#F28C28</color>
+
 </resources>
