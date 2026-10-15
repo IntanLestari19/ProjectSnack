@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ilw_pocky.databinding.ActivitySawitBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class SawitActivity : AppCompatActivity() {
 
@@ -23,10 +25,12 @@ class SawitActivity : AppCompatActivity() {
             title = getString(R.string.app_sawit)
             subtitle = getString(R.string.tagline)
         }
+        // Akses "user_pref"
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
-        // Tombol "Mulai Sekarang" pindah ke RegisActivity
-        binding.btnStart.setOnClickListener {
-            val intent = Intent(this, RegisActivity::class.java)
+        // Tombol ke profi developer
+        binding.btnProfil.setOnClickListener {
+            val intent = Intent(this, ProfilActivity::class.java)
             startActivity(intent)
         }
 
@@ -35,6 +39,23 @@ class SawitActivity : AppCompatActivity() {
             val intent = Intent(this, AlatPanenActivity::class.java)
             startActivity(intent)
         }
+        // Tombol Logout: Konfirmasi dialog, hapus SharedPreferences, lalu tutup activity / kembali ke login
+        binding.btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Logout")
+                .setMessage("Apakah kamu yakin ingin keluar?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+                    finish()
+                }
+                .setNegativeButton("Batal", null)
+                .show()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -42,7 +42,7 @@
 
     <string name="regis_heading">Buat Akun Baru</string>
     <string name="regis_sub">Lengkapi data untuk mulai mengelola stok kebun</string>
-    <string name="hint_name">Nama lengkap</string>
+    <string name="hint_name">Username</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Kata sandi</string>
     <string name="hint_confirm">Ulangi kata sandi</string>
@@ -60,4 +60,27 @@
     <string name="btn_login">Masuk</string>
     <string name="no_account">Belum punya akun? </string>
     <string name="to_regis">Daftar</string>
+
+    <string name="title_beranda">Beranda</string>
+    <string name="title_profil">Profil Developer</string>
+    <string name="splash_version">Sistem Palmventory</string>
+    <string name="welcome_label">Selamat datang,</string>
+    <string name="home_sub">Pantau stok kebunmu hari ini</string>
+    <string name="btn_profil">Profil Developer</string>
+    <string name="btn_logout">Logout</string>
+
+    <string name="dev_initial">ILW</string>
+    <string name="dev_name">Intan Lestari Widiyanti</string>
+    <string name="dev_role">Mobile App Developer · Palmventory</string>
+    <string name="dev_campus">Politeknik Caltex Riau </string>
+    <string name="dev_about_heading">Tentang Saya</string>
+    <string name="dev_about">Saya Intan adalah Mahasiswa Jurusan Teknik Informatika angkatan 2024 dan sekarang sedang semeter 5. Pada project ini saya sebagai developer seluruh aplikasi Palmventory ini .</string>
+    <string name="dev_sosmed_heading">Sosial Media</string>
+    <string name="dev_ig">📸 Instagram: @Intan_Lest</string>
+    <string name="dev_github">💻 GitHub: github.com/IntanLestari19</string>
+    <string name="dev_email">✉️ Email: Intan24ti@mahasiswa.pcr.ac.id</string>
+    <string name="dev_hobi_heading">Hobi</string>
+    <string name="dev_hobi">📺 Nonton\n✈️ Traveling</string>
+    <string name="dev_kekuatan_heading">Kekuatan Terbesar</string>
+    <string name="dev_kekuatan">Memiliki kedisiplinan yang bagus dan selalu berusaha menyelesaikan setiap tugas dengan tepat waktu. Selain itu, selain itu saya terbiasa rapi dan teliti..</string>
 </resources>

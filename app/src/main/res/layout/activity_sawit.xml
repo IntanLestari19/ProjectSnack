@@ -33,7 +33,6 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="20dp">
 
-
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -257,15 +256,15 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tombol -->
+            <!-- Group Tombol Aksi -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnStart"
+                android:id="@+id/btnProfil"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginTop="26dp"
                 android:backgroundTint="@color/primary_blue"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/btn_start"
+                android:text="@string/btn_profil"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="15sp"
@@ -286,6 +285,22 @@
                 app:icon="@drawable/ic_web"
                 app:iconGravity="textStart"
                 app:iconTint="@color/primary_blue" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/btn_logout"
+                android:textAllCaps="false"
+                android:textColor="@color/logo_oranye"
+                android:textSize="15sp"
+                app:cornerRadius="14dp"
+                app:strokeColor="@color/logo_oranye"
+                app:strokeWidth="1.5dp" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

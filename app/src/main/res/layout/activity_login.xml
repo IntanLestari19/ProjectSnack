@@ -37,7 +37,7 @@
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="@string/app_sawit"
                 android:src="@drawable/logo_palmventory" />
 
             <TextView
@@ -70,12 +70,12 @@
                 app:strokeWidth="1dp">
 
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="@null"
                     android:fontFamily="@font/poppins_regular"
-                    android:hint="@string/hint_email"
+                    android:hint="@string/hint_name"
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="16dp"
                     android:textColor="@color/text_black"
