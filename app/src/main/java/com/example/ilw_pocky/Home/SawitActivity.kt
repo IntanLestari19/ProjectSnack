@@ -1,4 +1,4 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.ActivitySawitBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class SawitActivity : AppCompatActivity() {
 

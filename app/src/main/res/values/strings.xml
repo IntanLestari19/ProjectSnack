@@ -12,8 +12,7 @@
                                     Pocky punya banyak pilihan rasa enak, seperti Strawberry, Cokelat, Matcha, dan Cookies dan Cream.</string>
     <string name="teks_judul_gizi">Komposisi &amp; Nilai Gizi</string>
     <string name="teks_gizi">Energi: sekitar 170–190 kkal. \n Lemak: sekitar 6–8 gram. \n Karbohidrat: sekitar 25–30 gram.
-        \n Gula: sekitar 12–16 gram. \n rotein: sekitar 3–4 gram. \n Natrium: sekitar 50–100 mg.</string>
-
+        \n Gula: sekitar 12–16 gram. \n protein: sekitar 3–4 gram. \n Natrium: sekitar 50–100 mg.</string>
 
     <string name="tagline">Kelola Stok, Dukung Panen</string>
     <string name="title_regis">Daftar Akun</string>
@@ -82,5 +81,126 @@
     <string name="dev_hobi_heading">Hobi</string>
     <string name="dev_hobi">📺 Nonton\n✈️ Traveling</string>
     <string name="dev_kekuatan_heading">Kekuatan Terbesar</string>
-    <string name="dev_kekuatan">Memiliki kedisiplinan yang bagus dan selalu berusaha menyelesaikan setiap tugas dengan tepat waktu. Selain itu, selain itu saya terbiasa rapi dan teliti..</string>
+    <string name="dev_kekuatan">Memiliki kedisiplinan yang bagus dan selalu berusaha menyelesaikan setiap tugas dengan tepat waktu. Selain itu, saya terbiasa rapi dan teliti..</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_kelola">Kelola Barang</string>
+    <string name="menu_laporan">Laporan</string>
+
+    <!-- String Kelola Barang -->
+    <string name="kb_heading">Stok Barang</string>
+    <string name="kb_breadcrumb">PALMVENTORY › STOK BARANG</string>
+    <string name="kb_btn_tambah">+ TAMBAH BARANG</string>
+
+    <string name="kb_stat_total_sku_title">TOTAL JENIS BARANG</string>
+    <string name="kb_stat_total_sku_val">4 Barang</string>
+    <string name="kb_stat_total_stok_title">TOTAL JUMLAH STOK</string>
+    <string name="kb_stat_total_stok_val">2388 Unit</string>
+
+    <string name="kb_table_title">DAFTAR STOK BARANG KEBUN</string>
+
+    <string name="sp_heading">Status Pengiriman</string>
+    <string name="kb_1">Pupuk NPK</string>
+    <string name="kb_1_d">Stok: 268 • Gudang A</string>
+    <string name="kb_2">Egrek Panen</string>
+    <string name="kb_2_d">Stok: 12 • Gudang B</string>
+    <string name="kb_3">Bibit Sawit</string>
+    <string name="kb_3_d">Stok: 500 • Pembibitan</string>
+
+    <string name="kb_item1_nama">Pupuk NPK</string>
+    <string name="kb_item1_sku">Kode: BRG04</string>
+    <string name="kb_item1_kat">Kategori: PUPUK</string>
+    <string name="kb_item1_stok">Jumlah Stok: 268 Unit</string>
+    <string name="kb_item1_lokasi">Lokasi: Gudang A (Lemari Kunci Depan)</string>
+    <string name="kb_item1_ket">Keterangan: -</string>
+
+    <string name="kb_item2_nama">Palu</string>
+    <string name="kb_item2_sku">Kode: BRG05</string>
+    <string name="kb_item2_kat">Kategori: ALAT KERJA</string>
+    <string name="kb_item2_stok">Jumlah Stok: 2037 Unit</string>
+    <string name="kb_item2_lokasi">Lokasi: Gudang C (Rak Besi Heavy-Duty)</string>
+    <string name="kb_item2_ket">Keterangan: -</string>
+
+    <string name="kb_item3_nama">Cangkul</string>
+    <string name="kb_item3_sku">Kode: BRG03</string>
+    <string name="kb_item3_kat">Kategori: ALAT KERJA</string>
+    <string name="kb_item3_stok">Jumlah Stok: 51 Unit</string>
+    <string name="kb_item3_lokasi">Lokasi: Gudang A (Lemari Kunci Depan)</string>
+    <string name="kb_item3_ket">Keterangan: Disimpan untuk cadangan</string>
+
+    <string name="kb_item4_nama">Pupuk</string>
+    <string name="kb_item4_sku">Kode: BRG02</string>
+    <string name="kb_item4_kat">Kategori: PUPUK</string>
+    <string name="kb_item4_stok">Jumlah Stok: 32 Unit</string>
+    <string name="kb_item4_lokasi">Lokasi: Gudang A (Lemari Kunci Depan)</string>
+    <string name="kb_item4_ket">Keterangan: Barangnya berat, hati-hati</string>
+
+    <string name="kb_action_edit">EDIT</string>
+    <string name="kb_action_hapus">HAPUS</string>
+
+    <string name="menu_pengguna">Pengguna</string>
+
+    <string name="title_pengguna">Manajemen Pengguna</string>
+    <string name="mp_heading">Daftar Pengguna</string>
+    <string name="mp_1">Budi Santoso</string>
+    <string name="mp_1_d">Pemilik • Aktif</string>
+    <string name="mp_2">Siti Rahma</string>
+    <string name="mp_2_d">Karyawan • Aktif</string>
+    <string name="mp_3">Andi Pratama</string>
+    <string name="mp_3_d">Supplier • Nonaktif</string>
+
+    <!-- Teks Laporan Harian -->
+    <string name="lp_breadcrumb">PALMVENTORY › LAPORAN HARIAN</string>
+    <string name="lp_heading">Laporan Harian</string>
+    <string name="lp_btn_print">CETAK LAPORAN</string>
+    <string name="lp_date_filter">9 JULI 2026</string>
+    <string name="lp_filter_hint">FILTER: NAMA BARANG</string>
+    <string name="lp_search_hint">Cari berdasarkan nama barang...</string>
+    <string name="lp_table_title">INVENTORI BARANG (LIVE DATA)</string>
+
+    <!-- Header Tabel -->
+    <string name="lp_col_sku">ID SKU</string>
+    <string name="lp_col_nama">NAMA BARANG</string>
+    <string name="lp_col_kat">KATEGORI</string>
+    <string name="lp_col_tgl">TANGGAL AKSI</string>
+    <string name="lp_col_aksi">AKSI BARANG</string>
+    <string name="lp_col_stok">STOK AKHIR</string>
+    <string name="lp_col_status">STATUS</string>
+
+    <!-- Data Baris 1 -->
+    <string name="lp_r1_sku">BRG05</string>
+    <string name="lp_r1_nama">Palu</string>
+    <string name="lp_r1_kat">ALAT KERJA</string>
+    <string name="lp_r1_tgl">2026-07-07</string>
+    <string name="lp_r1_aksi">+9</string>
+    <string name="lp_r1_stok">9</string>
+    <string name="lp_r1_status">MENIPIS</string>
+
+    <!-- Data Baris 2 -->
+    <string name="lp_r2_sku">BRG03</string>
+    <string name="lp_r2_nama">Cangkul</string>
+    <string name="lp_r2_kat">PUPUK</string>
+    <string name="lp_r2_tgl">2026-07-06</string>
+    <string name="lp_r2_aksi">+11</string>
+    <string name="lp_r2_stok">51</string>
+    <string name="lp_r2_status">TERSEDIA</string>
+
+    <!-- Data Baris 3 -->
+    <string name="lp_r3_sku">BRG03</string>
+    <string name="lp_r3_nama">Cangkul</string>
+    <string name="lp_r3_kat">PUPUK</string>
+    <string name="lp_r3_tgl">2026-07-06</string>
+    <string name="lp_r3_aksi">+40</string>
+    <string name="lp_r3_stok">40</string>
+    <string name="lp_r3_status">TERSEDIA</string>
+
+    <!-- Data Baris 4 -->
+    <string name="lp_r4_sku">BRG05</string>
+    <string name="lp_r4_nama">Palu</string>
+    <string name="lp_r4_kat">ALAT KERJA</string>
+    <string name="lp_r4_tgl">2026-07-06</string>
+    <string name="lp_r4_aksi">+30</string>
+    <string name="lp_r4_stok">2037</string>
+    <string name="lp_r4_status">TERSEDIA</string>
 </resources>

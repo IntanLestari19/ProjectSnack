@@ -1,10 +1,11 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.Home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.ActivityAlatPanenBinding
 
 class AlatPanenActivity : AppCompatActivity() {

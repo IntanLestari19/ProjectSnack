@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/kelola_barang"
+        android:icon="@drawable/ic_inventory"
+        android:title="@string/menu_kelola" />
+    <item
+        android:id="@+id/laporan"
+        android:icon="@drawable/ic_report"
+        android:title="@string/menu_laporan" />
+    <item
+        android:id="@+id/manajemen_pengguna"
+        android:icon="@drawable/ic_pengguna"
+        android:title="@string/menu_pengguna" />
+</menu>

@@ -1,9 +1,10 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.ilw_pocky.BaseActivity
 import com.example.ilw_pocky.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -24,7 +25,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
             val isLogin = sharedPref.getBoolean("isLogin", false)
             val intent = if (isLogin) {
-                Intent(this@SplashScreenActivity, SawitActivity::class.java)
+                Intent(this@SplashScreenActivity, BaseActivity::class.java)
             } else {
                 Intent(this@SplashScreenActivity, LoginActivity::class.java)
             }

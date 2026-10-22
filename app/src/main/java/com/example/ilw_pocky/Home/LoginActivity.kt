@@ -1,12 +1,13 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ilw_pocky.BaseActivity
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.ActivityLoginBinding
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class LoginActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
                 editor.putBoolean("isLogin", true)
                 editor.putString("username", username)
                 editor.apply()
-                startActivity(Intent(this, SawitActivity::class.java))
+                startActivity(Intent(this, BaseActivity::class.java))
             } else {
                 AlertDialog.Builder(this)
                     .setMessage("Silahkan coba lagi")

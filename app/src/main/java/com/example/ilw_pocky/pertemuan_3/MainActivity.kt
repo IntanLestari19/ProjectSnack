@@ -1,13 +1,9 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.ilw_pocky.databinding.ActivityMainBinding
-import com.example.ilw_pocky.pertemuan_3.DetailActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

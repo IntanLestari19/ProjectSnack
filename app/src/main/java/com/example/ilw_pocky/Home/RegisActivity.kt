@@ -1,9 +1,10 @@
-package com.example.ilw_pocky
+package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.ActivityRegisBinding
 
 class RegisActivity : AppCompatActivity() {

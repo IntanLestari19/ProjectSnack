@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ILWpocky">
         <activity
-            android:name=".MainActivity"
+            android:name=".pertemuan_3.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -22,25 +22,25 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SawitActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity
-            android:name=".RegisActivity"
+            android:name=".Home.SawitActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Home.RegisActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".AlatPanenActivity"
+            android:name=".Home.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".Home.AlatPanenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.SplashScreenActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +48,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ProfilActivity"
+            android:name=".Home.ProfilActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".BaseActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
