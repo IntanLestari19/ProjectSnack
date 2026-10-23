@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Register With Gmail"
+        android:textColor="@color/logo_biru_tua"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Masukkan alamat email Gmail kamu untuk mendaftar"
+        android:textColor="@color/text_gray"
+        android:textSize="13sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/biru_muda"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/abu_muda"
+        app:strokeWidth="1dp">
+
+        <EditText
+            android:id="@+id/etGmailInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="contoh@gmail.com"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_gray"
+            android:textSize="14sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLanjutRegis"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary_blue"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Lanjutkan Registrasi"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:cornerRadius="14dp" />
+</LinearLayout>
