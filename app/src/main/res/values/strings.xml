@@ -118,7 +118,7 @@
     <string name="kb_item2_nama">Palu</string>
     <string name="kb_item2_sku">Kode: BRG05</string>
     <string name="kb_item2_kat">Kategori: ALAT KERJA</string>
-    <string name="kb_item2_stok">Jumlah Stok: 2037 Unit</string>
+    <string name="kb_item2_stok">Jumlah Stok: 73 Unit</string>
     <string name="kb_item2_lokasi">Lokasi: Gudang C (Rak Besi Heavy-Duty)</string>
     <string name="kb_item2_ket">Keterangan: -</string>
 
@@ -153,7 +153,7 @@
     <!-- Teks Laporan Harian -->
     <string name="lp_breadcrumb">PALMVENTORY › LAPORAN HARIAN</string>
     <string name="lp_heading">Laporan Harian</string>
-    <string name="lp_btn_print">CETAK LAPORAN</string>
+    <string name="lp_btn_print">DOWNLOAD LAPORAN</string>
     <string name="lp_date_filter">9 JULI 2026</string>
     <string name="lp_filter_hint">FILTER: NAMA BARANG</string>
     <string name="lp_search_hint">Cari berdasarkan nama barang...</string>
@@ -203,4 +203,9 @@
     <string name="lp_r4_aksi">+30</string>
     <string name="lp_r4_stok">2037</string>
     <string name="lp_r4_status">TERSEDIA</string>
+
+    <string name="chart_heading">Stok Barang (Kelola Barang)</string>
+    <string name="chart_label">Jumlah Stok</string>
+    <string name="chart_hint">Data ringkasan dari halaman Kelola Barang</string>
+    <string name="barang_kosong">Barang tidak ditemukan</string>
 </resources>
