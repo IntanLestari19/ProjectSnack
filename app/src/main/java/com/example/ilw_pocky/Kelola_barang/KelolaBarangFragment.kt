@@ -4,15 +4,61 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.FragmentKelolaBarangBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class KelolaBarangFragment : Fragment() {
 
     private var _binding: FragmentKelolaBarangBinding? = null
     private val binding get() = _binding!!
+
+    // Data statis disesuaikan dengan tampilan website Palmventory
+    private val daftarBarang = listOf(
+        BarangModel(
+            sku = "BRG04",
+            nama = "Pupuk NPK",
+            kategori = "PUPUK",
+            stok = 268,
+            lokasi = "Blok A (Lemari Kunci Depan)",
+            keterangan = "-",
+            imageUrl = "https://picsum.photos/seed/pupuk1/200/200"
+        ),
+        BarangModel(
+            sku = "BRG05",
+            nama = "Palu",
+            kategori = "ALAT KERJA",
+            stok = 2037,
+            lokasi = "Blok C (Rak Besi Heavy-Duty)",
+            keterangan = "-",
+            imageUrl = "https://picsum.photos/seed/palu1/200/200"
+        ),
+        BarangModel(
+            sku = "BRG03",
+            nama = "Cangkul",
+            kategori = "ALAT KERJA",
+            stok = 51,
+            lokasi = "Blok A (Lemari Kunci Depan)",
+            keterangan = "ini untuk disimpan aja",
+            imageUrl = "https://picsum.photos/seed/cangkul1/200/200"
+        ),
+        BarangModel(
+            sku = "BRG02",
+            nama = "Pupuk",
+            kategori = "PUPUK",
+            stok = 32,
+            lokasi = "Blok A (Lemari Kunci Depan)",
+            keterangan = "Barangnya berat, hati-hati",
+            imageUrl = "https://picsum.photos/seed/pupuk2/200/200"
+        )
+    )
+
+    private var currentQuery: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -29,46 +75,92 @@ class KelolaBarangFragment : Fragment() {
             title = "Kelola Barang"
         }
 
+        setupTabsAndViewPager()
+        setupSearch()
+        setupStatistikDanBadge()
+
+        binding.btnTambahBarang.setOnClickListener {
+            Toast.makeText(requireContext(), "Tombol Tambah Barang diklik", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun setupTabsAndViewPager() {
+        val tabsAdapter = KelolaBarangTabsAdapter(this)
+        binding.viewPagerBarang.adapter = tabsAdapter
+
+        TabLayoutMediator(binding.tabLayoutBarang, binding.viewPagerBarang) { tab, position ->
+            when (position) {
+                0 -> {
+                    tab.text = "Semua"
+                    tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_inventory)
+                }
+                1 -> {
+                    tab.text = "Pupuk"
+                    tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_pupuk)
+                }
+                2 -> {
+                    tab.text = "Alat Kerja"
+                    tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_alat)
+                }
+            }
+        }.attach()
+    }
+
+    private fun setupSearch() {
         binding.searchViewBarang.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                filterData(query)
+                currentQuery = query?.trim() ?: ""
+                notifyAllTabs()
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                filterData(newText)
+                currentQuery = newText?.trim() ?: ""
+                notifyAllTabs()
                 return true
             }
         })
     }
 
-    private fun filterData(query: String?) {
-        val searchText = query?.lowercase()?.trim() ?: ""
+    fun getFilteredBarang(kategoriFilter: String): List<BarangModel> {
+        val keyword = currentQuery.lowercase()
+        return daftarBarang.filter { item ->
+            val matchKategori = kategoriFilter == "SEMUA" ||
+                    item.kategori.equals(kategoriFilter, ignoreCase = true)
+            val matchSearch = keyword.isEmpty() ||
+                    item.nama.lowercase().contains(keyword) ||
+                    item.sku.lowercase().contains(keyword)
+            matchKategori && matchSearch
+        }
+    }
 
-        val nama1 = binding.tvNama1.text.toString().lowercase()
-        val sku1 = binding.tvSku1.text.toString().lowercase()
-
-        val nama2 = binding.tvNama2.text.toString().lowercase()
-        val sku2 = binding.tvSku2.text.toString().lowercase()
-
-        // Pengecekan visibilitas tiap card
-        val isCard1Match = nama1.contains(searchText) || sku1.contains(searchText)
-        val isCard2Match = nama2.contains(searchText) || sku2.contains(searchText)
-
-        if (searchText.isEmpty()) {
-            binding.cardBarang1.visibility = View.VISIBLE
-            binding.cardBarang2.visibility = View.VISIBLE
-            binding.tvEmptyState.visibility = View.GONE
-        } else {
-            binding.cardBarang1.visibility = if (isCard1Match) View.VISIBLE else View.GONE
-            binding.cardBarang2.visibility = if (isCard2Match) View.VISIBLE else View.GONE
-
-            // Jika tidak ada satu pun barang yang cocok, tampilkan teks "Barang tidak ditemukan"
-            if (!isCard1Match && !isCard2Match) {
-                binding.tvEmptyState.visibility = View.VISIBLE
-            } else {
-                binding.tvEmptyState.visibility = View.GONE
+    private fun notifyAllTabs() {
+        childFragmentManager.fragments.forEach { fragment ->
+            if (fragment is TabBarangFragment) {
+                fragment.refreshList()
             }
+        }
+    }
+
+    private fun setupStatistikDanBadge() {
+        binding.tvTotalJenisBarang.text = "${daftarBarang.size} Items"
+        binding.tvTotalJumlahStok.text = "${daftarBarang.sumOf { it.stok }} Unit"
+
+        val countSemua = daftarBarang.size
+        val countPupuk = daftarBarang.count { it.kategori.equals("PUPUK", ignoreCase = true) }
+        val countAlat = daftarBarang.count { it.kategori.equals("ALAT KERJA", ignoreCase = true) }
+
+        binding.tabLayoutBarang.getTabAt(0)?.getOrCreateBadge()?.apply {
+            isVisible = true
+            number = countSemua
+        }
+        binding.tabLayoutBarang.getTabAt(1)?.getOrCreateBadge()?.apply {
+            isVisible = true
+            number = countPupuk
+        }
+        binding.tabLayoutBarang.getTabAt(2)?.getOrCreateBadge()?.apply {
+            isVisible = true
+            number = countAlat
         }
     }
 

@@ -208,4 +208,27 @@
     <string name="chart_label">Jumlah Stok</string>
     <string name="chart_hint">Data ringkasan dari halaman Kelola Barang</string>
     <string name="barang_kosong">Barang tidak ditemukan</string>
+
+    <!-- info slide 1 -->
+    <string name="badge_info1">1 dari 3 • Pengenalan</string>
+    <string name="judul_info1">Selamat Datang di Palmventory</string>
+    <string name="desk_info1">Sistem informasi manajemen inventori kebun kelapa sawit terpadu untuk mencatat kebutuhan operasional secara rapi dan akurat.</string>
+    <string name="subjudul_info1">Apa saja yang bisa dilakukan?</string>
+    <string name="poin_info1">• Melihat ringkasan grafik stok barang langsung di Beranda.\n• Mencegah kehabisan maupun penumpukan stok kebun.\n• Mengakses katalog alat panen &amp; panduan operasional.</string>
+
+    <!-- info slide 2 -->
+    <string name="badge_info2">2 dari 3 • Inventori</string>
+    <string name="judul_info2">Kelola &amp; Pantau Stok Barang</string>
+    <string name="desk_info2">Atur seluruh perlengkapan kebun mulai dari pupuk hingga alat kerja dalam satu daftar yang terorganisir.</string>
+    <string name="subjudul_info2">Fitur di Menu Kelola Barang:</string>
+    <string name="poin_info2">• Filter cepat berdasarkan tab Semua, Pupuk, dan Alat Kerja.\n• Cari barang seketika lewat nama atau kode SKU.\n• Pantau badge jumlah item &amp; status stok aman/menipis.</string>
+
+    <!-- info slide 3 -->
+    <string name="badge_info3">3 dari 3 • Laporan &amp; Pengguna</string>
+    <string name="judul_info3">Laporan &amp; Kelola Pengguna</string>
+    <string name="desk_info3">Catat transaksi harian dan hubungkan seluruh pihak kebun dalam satu alur kerja yang transparan.</string>
+    <string name="subjudul_info3">Kemudahan yang Didapat:</string>
+    <string name="poin_info3">• Rekap laporan barang masuk &amp; keluar siap unduh/cetak.\n• Pengajuan pemesanan barang baru langsung ke Supplier.\n• Pengaturan hak akses Pemilik Kebun, Karyawan &amp; Supplier.</string>
+    <string name="btn_tutup_info">Mengerti &amp; Tutup</string>
+
 </resources>

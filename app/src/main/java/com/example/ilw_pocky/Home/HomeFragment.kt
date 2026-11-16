@@ -4,12 +4,16 @@ import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.ilw_pocky.Home.info.InfoPalmventoryActivity
 import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.FragmentHomeBinding
 import com.github.mikephil.charting.components.XAxis
@@ -48,6 +52,9 @@ class HomeFragment : Fragment() {
             title = getString(R.string.app_sawit)
             subtitle = getString(R.string.tagline)
         }
+
+        // ethas untuk slide info
+        setHasOptionsMenu(true)
 
         // Chart stok barang (data dummy dari string Kelola Barang)
         setupBarChart()
@@ -156,5 +163,19 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.home_toolbar_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_info -> {
+                val intent = Intent(requireContext(), InfoPalmventoryActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

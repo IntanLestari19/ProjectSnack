@@ -20,4 +20,19 @@
     <color name="logo_krem">#F3E3C3</color>
     <color name="logo_oranye">#F28C28</color>
 
+<!--    warna slide info-->
+    <color name="bg_slide1">#EAF4FF</color>
+    <color name="stroke_slide1">#CFE4FF</color>
+
+    <color name="bg_slide2">#E6F7FA</color>
+    <color name="stroke_slide2">#C2ECF3</color>
+    <color name="accent_slide2">#00838F</color>
+    <color name="badge_slide2">#D0F0F5</color>
+
+    <color name="bg_slide3">#EEF1FF</color>
+    <color name="stroke_slide3">#D4DCFF</color>
+    <color name="accent_slide3">#283593</color>
+    <color name="badge_slide3">#DCE2FF</color>
+
+
 </resources>
