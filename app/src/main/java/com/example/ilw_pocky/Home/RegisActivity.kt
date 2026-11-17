@@ -87,6 +87,13 @@ class RegisActivity : AppCompatActivity() {
                 }
             }
         }
+        // 3. Tombol / Teks Masuk Ditekan -> Kembali ke Halaman Login
+        binding.tvToLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

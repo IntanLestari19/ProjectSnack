@@ -1,62 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="@color/white">
+    android:background="@drawable/bg_motif_halaman">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Register With Gmail"
-        android:textColor="@color/logo_biru_tua"
-        android:textSize="22sp" />
+    <!-- Background Melengkung Model Wave di Atas -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Masukkan alamat email Gmail kamu untuk mendaftar"
-        android:textColor="@color/text_gray"
-        android:textSize="13sp" />
-
-    <com.google.android.material.card.MaterialCardView
+    <!-- Toolbar Transparan dengan Panah Back -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@color/biru_muda"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="0dp"
-        app:strokeColor="@color/abu_muda"
-        app:strokeWidth="1dp">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/biru_muda"
+        app:titleTextColor="@color/white" />
 
-        <EditText
-            android:id="@+id/etGmailInput"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_header">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="43dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/primary_cyan"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_sawit"
+                android:padding="14dp"
+                android:src="@drawable/logo_palmventory" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:background="@null"
-            android:fontFamily="@font/poppins_regular"
-            android:hint="contoh@gmail.com"
-            android:inputType="textEmailAddress"
-            android:paddingHorizontal="16dp"
-            android:textColor="@color/text_black"
-            android:textColorHint="@color/text_gray"
-            android:textSize="14sp" />
-    </com.google.android.material.card.MaterialCardView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/stroke_slide1"
+            app:strokeWidth="1dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLanjutRegis"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/primary_blue"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Lanjutkan Registrasi"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:cornerRadius="14dp" />
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/gmail_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/gmail_sub"
+                    android:textColor="@color/text_gray"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    app:cardBackgroundColor="@color/bg_slide1"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/stroke_slide1"
+                    app:strokeWidth="1dp">
+
+                    <EditText
+                        android:id="@+id/etGmailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@null"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="@string/hint_gmail"
+                        android:inputType="textEmailAddress"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/text_gray"
+                        android:textSize="14sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLanjutRegis"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="@color/logo_biru_tua"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/btn_lanjut_regis"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

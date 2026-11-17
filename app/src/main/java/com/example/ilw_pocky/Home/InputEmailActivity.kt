@@ -2,7 +2,10 @@ package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.example.ilw_pocky.R
 import com.example.ilw_pocky.databinding.ActivityInputEmailBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -14,6 +17,15 @@ class InputEmailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInputEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = getString(R.string.gmail_heading)
+            subtitle = getString(R.string.app_sawit)
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
+        binding.toolbar.navigationIcon?.setTint(ContextCompat.getColor(this, R.color.white))
 
         binding.btnLanjutRegis.setOnClickListener {
             val email = binding.etGmailInput.text.toString().trim()
@@ -39,5 +51,13 @@ class InputEmailActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressedDispatcher.onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

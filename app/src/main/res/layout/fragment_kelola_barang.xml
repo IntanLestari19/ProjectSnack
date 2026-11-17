@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bg_motif_halaman"
     tools:context=".kelola_barang.KelolaBarangFragment">
 
     <!-- Area Konten Utama di Bawah Lengkungan Wave -->
@@ -21,9 +21,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/kb_breadcrumb"
-            android:textColor="@color/text_gray"
+            android:textColor="@color/primary_blue"
             android:textSize="11sp" />
 
         <!-- Header Title & Tombol Tambah -->
@@ -31,110 +31,165 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:background="@color/primary_blue" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/poppins_semibold"
+                android:fontFamily="@font/poppins_bold"
                 android:text="@string/kb_heading"
-                android:textColor="@color/text_black"
-                android:textSize="20sp" />
+                android:textColor="@color/logo_biru_tua"
+                android:textSize="19sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnTambahBarang"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/primary_blue"
-                android:fontFamily="@font/poppins_medium"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/logo_biru_tua"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="@string/kb_btn_tambah"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="11sp"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="12dp" />
         </LinearLayout>
 
         <!-- Statistik Total SKU & Total Stok Fisik -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="12dp"
             android:baselineAligned="false"
             android:orientation="horizontal">
 
+            <!-- Kartu 1: Total Jenis Barang / SKU -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/stroke_slide1"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="@string/kb_stat_total_sku_title"
-                        android:textColor="@color/text_gray"
-                        android:textSize="10sp" />
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/tvTotalJenisBarang"
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/kb_stat_total_sku_title"
+                            android:src="@drawable/ic_inventory"
+                            app:tint="@color/primary_blue" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="@string/kb_stat_total_sku_val"
-                        android:textColor="@color/text_black"
-                        android:textSize="15sp" />
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/kb_stat_total_sku_title"
+                            android:textColor="@color/text_gray"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalJenisBarang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/kb_stat_total_sku_val"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Kartu 2: Total Jumlah Stok -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:strokeColor="@color/stroke_slide1"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="@string/kb_stat_total_stok_title"
-                        android:textColor="@color/text_gray"
-                        android:textSize="10sp" />
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:padding="8dp">
 
-                    <TextView
-                        android:id="@+id/tvTotalJumlahStok"
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/kb_stat_total_stok_title"
+                            android:src="@drawable/ic_report"
+                            app:tint="@color/primary_cyan" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="@string/kb_stat_total_stok_val"
-                        android:textColor="@color/text_black"
-                        android:textSize="15sp" />
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/kb_stat_total_stok_title"
+                            android:textColor="@color/text_gray"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalJumlahStok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/kb_stat_total_stok_val"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
@@ -144,10 +199,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/biru_muda"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/abu_muda"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/stroke_slide1"
             app:strokeWidth="1dp">
 
             <androidx.appcompat.widget.SearchView
@@ -156,24 +211,36 @@
                 android:layout_height="44dp"
                 app:iconifiedByDefault="false"
                 app:queryBackground="@android:color/transparent"
-                app:queryHint="Cari nama barang, SKU, atau lokasi..." />
+                app:queryHint="@string/kb_search_hint" />
         </com.google.android.material.card.MaterialCardView>
 
         <!-- TabLayout Kategori (Semua | Pupuk | Alat Kerja) -->
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayoutBarang"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="@color/white"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/primary_blue"
-            app:tabIndicatorFullWidth="false"
-            app:tabIndicatorHeight="3dp"
-            app:tabMode="fixed"
-            app:tabRippleColor="@color/biru_muda"
-            app:tabSelectedTextColor="@color/primary_blue"
-            app:tabTextColor="@color/text_gray" />
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="1dp"
+            app:strokeColor="@color/stroke_slide1"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/primary_blue"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="3dp"
+                app:tabMode="fixed"
+                app:tabPaddingBottom="6dp"
+                app:tabPaddingTop="6dp"
+                app:tabRippleColor="@color/biru_muda"
+                app:tabSelectedTextColor="@color/logo_biru_tua"
+                app:tabTextColor="@color/text_gray" />
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- ViewPager2 untuk Menampilkan RecyclerView Tiap Tab -->
         <androidx.viewpager2.widget.ViewPager2

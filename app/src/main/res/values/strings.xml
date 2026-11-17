@@ -21,9 +21,11 @@
     <string name="menu_search">Cari</string>
     <string name="menu_settings">Pengaturan</string>
 
+<!--home-->
     <string name="about_heading">Tentang Palmventory</string>
     <string name="about_text">Palmventory adalah sistem informasi monitoring dan optimasi inventori untuk perkebunan kelapa sawit. Stok pupuk, alat panen, dan perlengkapan kebun tercatat rapi sehingga kekurangan maupun kelebihan barang dapat dicegah.</string>
     <string name="fitur_heading">Fitur Utama</string>
+    <string name="status_sistem_aktif">Sistem Aktif</string>
     <string name="f1_title">📦 Monitoring Stok</string>
     <string name="f1_desc">Pantau jumlah dan kondisi stok barang kebun secara real-time.</string>
     <string name="f2_title">📝 Pengajuan Barang</string>
@@ -230,5 +232,20 @@
     <string name="subjudul_info3">Kemudahan yang Didapat:</string>
     <string name="poin_info3">• Rekap laporan barang masuk &amp; keluar siap unduh/cetak.\n• Pengajuan pemesanan barang baru langsung ke Supplier.\n• Pengaturan hak akses Pemilik Kebun, Karyawan &amp; Supplier.</string>
     <string name="btn_tutup_info">Mengerti &amp; Tutup</string>
+
+    <!-- Tambahan String Kelola Barang, Laporan & Manajemen Pengguna -->
+    <string name="kb_search_hint">Cari nama barang, SKU, atau lokasi…</string>
+    <string name="mp_subjudul">Daftar akun pengguna dan hak akses operasional kebun</string>
+    <string name="lp_badge_status">Rekap Stok</string>
+
+    <!-- String Login, Regis & Input Gmail -->
+    <string name="btn_register_gmail">Register With Gmail</string>
+    <string name="gmail_heading">Register With Gmail</string>
+    <string name="gmail_sub">Masukkan alamat email Gmail kamu untuk melanjutkan pendaftaran akun Palmventory</string>
+    <string name="hint_gmail">contoh@gmail.com</string>
+    <string name="btn_lanjut_regis">Lanjutkan Registrasi</string>
+    <string name="hint_fullname">Nama Lengkap</string>
+    <string name="hint_username">Username</string>
+
 
 </resources>

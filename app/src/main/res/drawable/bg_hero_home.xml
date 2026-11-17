@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradasi Utama Degradado Azul (#00E4DB -> #0088D3) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:endColor="@color/primary_blue"
+                android:startColor="@color/primary_cyan"
+                android:type="linear" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+
+    <!-- Motif Lingkaran Halus di Sudut Kanan -->
+    <item
+        android:width="150dp"
+        android:height="150dp"
+        android:gravity="bottom|end"
+        android:right="-35dp"
+        android:bottom="-35dp">
+        <shape android:shape="oval">
+            <solid android:color="#26FFFFFF" />
+        </shape>
+    </item>
+
+    <item
+        android:width="95dp"
+        android:height="95dp"
+        android:gravity="top|end"
+        android:right="16dp"
+        android:top="-25dp">
+        <shape android:shape="oval">
+            <solid android:color="#1AFFFFFF" />
+        </shape>
+    </item>
+</layer-list>

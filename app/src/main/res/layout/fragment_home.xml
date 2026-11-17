@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_motif_halaman">
 
     <!-- Area Konten Scrollable: Dimulai tepat di bawah lengkungan wave -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:clipToPadding="true"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/background_header">
 
@@ -18,293 +18,357 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingHorizontal="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="24dp">
+            android:paddingTop="10dp"
+            android:paddingBottom="28dp">
 
-            <!-- Kartu Header Logo di Bawah Lengkungan (Tidak Bertumpuk) -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- Hero Card Identitas Palmventory (Gradasi Biru + Motif Halus) -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="3dp"
-                app:strokeColor="@color/abu_muda"
-                app:strokeWidth="1dp">
+                android:background="@drawable/bg_hero_home"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_sawit"
+                        android:padding="10dp"
+                        android:src="@drawable/logo_palmventory" />
+                </com.google.android.material.card.MaterialCardView>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                    <!-- Bingkai Logo Kotak Melengkung -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="74dp"
-                        android:layout_height="74dp"
-                        app:cardBackgroundColor="@color/biru_muda"
-                        app:cardCornerRadius="18dp"
-                        app:cardElevation="0dp"
-                        app:strokeColor="@color/primary_cyan"
-                        app:strokeWidth="2dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:contentDescription="@string/app_sawit"
-                            android:padding="8dp"
-                            android:src="@drawable/logo_palmventory" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:background="@drawable/bg_icon_box"
+                        android:backgroundTint="@color/biru_muda"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/status_sistem_aktif"
+                        android:textColor="@color/logo_biru_tua"
+                        android:textSize="10sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_bold"
-                            android:text="@string/app_sawit"
-                            android:textColor="@color/logo_biru_tua"
-                            android:textSize="22sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/app_sawit"
+                        android:textColor="@color/white"
+                        android:textSize="21sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/tagline"
-                            android:textColor="@color/text_gray"
-                            android:textSize="13sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/tagline"
+                        android:textColor="@color/biru_muda"
+                        android:textSize="12sp" />
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
-            <!-- Fitur Utama dalam Bentuk GridLayout 2x2 -->
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Heading: Fitur Utama -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/fitur_heading"
-                android:textColor="@color/logo_biru_tua"
-                android:textSize="17sp" />
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="18dp"
+                    android:background="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/fitur_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- GridLayout 2x2 Fitur Utama -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:columnCount="2"
                 android:rowCount="2"
                 android:useDefaultMargins="false">
 
                 <!-- Grid Item 1: Monitoring Stok -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginEnd="6dp"
                     android:layout_marginBottom="12dp"
-                    android:background="@drawable/bg_grid_item"
-                    android:orientation="vertical"
-                    android:padding="14dp">
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/stroke_slide1"
+                    app:strokeWidth="1dp">
 
-                    <FrameLayout
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:background="@drawable/bg_icon_box"
-                        android:padding="9dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:contentDescription="@string/f1_title"
-                            android:src="@drawable/ic_inventory"
-                            app:tint="@color/primary_blue" />
-                    </FrameLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Monitoring Stok"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
+                        android:orientation="vertical"
+                        android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:lineSpacingExtra="2dp"
-                        android:text="@string/f1_desc"
-                        android:textColor="@color/text_gray"
-                        android:textSize="11sp" />
-                </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_icon_box"
+                            android:padding="9dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/f1_title"
+                                android:src="@drawable/ic_inventory"
+                                app:tint="@color/primary_blue" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/f1_title"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/f1_desc"
+                            android:textColor="@color/text_gray"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Grid Item 2: Pengajuan Barang -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginStart="6dp"
                     android:layout_marginBottom="12dp"
-                    android:background="@drawable/bg_grid_item"
-                    android:orientation="vertical"
-                    android:padding="14dp">
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/stroke_slide1"
+                    app:strokeWidth="1dp">
 
-                    <FrameLayout
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:background="@drawable/bg_icon_box"
-                        android:padding="9dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:contentDescription="@string/f2_title"
-                            android:src="@drawable/ic_report"
-                            app:tint="@color/logo_hijau" />
-                    </FrameLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Pengajuan Barang"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
+                        android:orientation="vertical"
+                        android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:lineSpacingExtra="2dp"
-                        android:text="@string/f2_desc"
-                        android:textColor="@color/text_gray"
-                        android:textSize="11sp" />
-                </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_icon_box"
+                            android:padding="9dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/f2_title"
+                                android:src="@drawable/ic_report"
+                                app:tint="@color/primary_cyan" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/f2_title"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/f2_desc"
+                            android:textColor="@color/text_gray"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Grid Item 3: Pengelolaan Barang -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginEnd="6dp"
-                    android:background="@drawable/bg_grid_item"
-                    android:orientation="vertical"
-                    android:padding="14dp">
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/stroke_slide1"
+                    app:strokeWidth="1dp">
 
-                    <FrameLayout
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:background="@drawable/bg_icon_box"
-                        android:padding="9dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:contentDescription="@string/f3_title"
-                            android:src="@drawable/ic_pengguna"
-                            app:tint="@color/logo_biru_tua" />
-                    </FrameLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Pengelolaan Barang"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
+                        android:orientation="vertical"
+                        android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:lineSpacingExtra="2dp"
-                        android:text="@string/f3_desc"
-                        android:textColor="@color/text_gray"
-                        android:textSize="11sp" />
-                </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_icon_box"
+                            android:padding="9dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/f3_title"
+                                android:src="@drawable/ic_pengguna"
+                                app:tint="@color/logo_biru_tua" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/f3_title"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/f3_desc"
+                            android:textColor="@color/text_gray"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Grid Item 4: Pesanan Supplier -->
-                <LinearLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginStart="6dp"
-                    android:background="@drawable/bg_grid_item"
-                    android:orientation="vertical"
-                    android:padding="14dp">
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/stroke_slide1"
+                    app:strokeWidth="1dp">
 
-                    <FrameLayout
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:background="@drawable/bg_icon_box"
-                        android:padding="9dp">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:contentDescription="@string/f4_title"
-                            android:src="@drawable/ic_web"
-                            app:tint="@color/logo_oranye" />
-                    </FrameLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Pesanan Supplier"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
+                        android:orientation="vertical"
+                        android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:fontFamily="@font/poppins_regular"
-                        android:lineSpacingExtra="2dp"
-                        android:text="@string/f4_desc"
-                        android:textColor="@color/text_gray"
-                        android:textSize="11sp" />
-                </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:background="@drawable/bg_icon_box"
+                            android:padding="9dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/f4_title"
+                                android:src="@drawable/ic_web"
+                                app:tint="@color/primary_blue" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="@string/f4_title"
+                            android:textColor="@color/logo_biru_tua"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/f4_desc"
+                            android:textColor="@color/text_gray"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </GridLayout>
 
-            <!-- Chart Kelola Barang -->
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Heading: Chart Kelola Barang -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/chart_heading"
-                android:textColor="@color/logo_biru_tua"
-                android:textSize="17sp" />
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="18dp"
+                    android:background="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/chart_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="18dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/stroke_slide1"
                 app:strokeWidth="1dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="14dp">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -317,113 +381,151 @@
                     <com.github.mikephil.charting.charts.BarChart
                         android:id="@+id/barChartBarang"
                         android:layout_width="match_parent"
-                        android:layout_height="260dp"
+                        android:layout_height="250dp"
                         android:layout_marginTop="8dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Tentang -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/about_heading"
-                android:textColor="@color/logo_biru_tua"
-                android:textSize="17sp" />
-
+            <!-- Heading: Tentang -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_grid_item"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="18dp"
+                    android:background="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/about_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/stroke_slide1"
+                app:strokeWidth="1dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
                     android:text="@string/about_text"
                     android:textColor="@color/text_black"
                     android:textSize="13sp" />
-            </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            <!-- Pengguna -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/role_heading"
-                android:textColor="@color/logo_biru_tua"
-                android:textSize="17sp" />
-
+            <!-- Heading: Pengguna -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_grid_item"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="18dp"
+                    android:background="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_icon_box"
-                    android:padding="12dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/role1_info"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/bg_icon_box"
-                    android:padding="12dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/role2_info"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/bg_icon_box"
-                    android:padding="12dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:text="@string/role3_info"
-                        android:textColor="@color/text_black"
-                        android:textSize="13sp" />
-                </LinearLayout>
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/role_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="16sp" />
             </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:strokeColor="@color/stroke_slide1"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_icon_box"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/role1_info"
+                            android:textColor="@color/text_black"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/role2_info"
+                            android:textColor="@color/text_black"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/role3_info"
+                            android:textColor="@color/text_black"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- Group Tombol Aksi -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnProfil"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="26dp"
                 android:backgroundTint="@color/primary_blue"
-                android:fontFamily="@font/poppins_medium"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="@string/btn_profil"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -433,10 +535,10 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnWeb"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="@color/biru_muda"
-                android:fontFamily="@font/poppins_medium"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="@string/btn_web"
                 android:textAllCaps="false"
                 android:textColor="@color/primary_blue"
@@ -444,12 +546,14 @@
                 app:cornerRadius="16dp"
                 app:icon="@drawable/ic_web"
                 app:iconGravity="textStart"
-                app:iconTint="@color/primary_blue" />
+                app:iconTint="@color/primary_blue"
+                app:strokeColor="@color/primary_blue"
+                app:strokeWidth="1.5dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="12dp"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins_medium"

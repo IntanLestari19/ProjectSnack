@@ -1,173 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_motif_halaman">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!-- Background Melengkung Model Wave di Atas -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Toolbar Transparan di Atas Wave -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/primary_blue"
-        android:fitsSystemWindows="true">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary_blue"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:subtitleTextColor="@color/biru_muda"
-            app:titleTextColor="@color/white" />
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/biru_muda"
+        app:titleTextColor="@color/white" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_header">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="24dp"
-            android:paddingVertical="24dp">
+            android:paddingHorizontal="22dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="28dp">
+
+            <!-- Header Judul dengan Aksen Biru -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="24dp"
+                    android:background="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/regis_heading"
+                    android:textColor="@color/logo_biru_tua"
+                    android:textSize="22sp" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/regis_heading"
-                android:textColor="@color/logo_biru_tua"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/regis_sub"
                 android:textColor="@color/text_gray"
                 android:textSize="13sp" />
 
-            <!-- 1. Nama -->
+            <!-- Kartu Form Registrasi -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/stroke_slide1"
                 app:strokeWidth="1dp">
 
-                <EditText
-                    android:id="@+id/etName"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:background="@null"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="Nama Lengkap"
-                    android:inputType="textPersonName"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="@color/text_black"
-                    android:textColorHint="@color/text_gray"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- 1. Nama -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/bg_slide1"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/stroke_slide1"
+                        app:strokeWidth="1dp">
+
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/hint_fullname"
+                            android:inputType="textPersonName"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/text_black"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 2. Email -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:cardBackgroundColor="@color/bg_slide1"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/stroke_slide1"
+                        app:strokeWidth="1dp">
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/hint_email"
+                            android:inputType="textEmailAddress"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/text_black"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 3. Username -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:cardBackgroundColor="@color/bg_slide1"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/stroke_slide1"
+                        app:strokeWidth="1dp">
+
+                        <EditText
+                            android:id="@+id/etUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/hint_username"
+                            android:inputType="textPersonName"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/text_black"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 4. Password -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        app:cardBackgroundColor="@color/bg_slide1"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/stroke_slide1"
+                        app:strokeWidth="1dp">
+
+                        <EditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/hint_password"
+                            android:inputType="textPassword"
+                            android:paddingHorizontal="16dp"
+                            android:textColor="@color/text_black"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="14sp" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Tombol Registrasi -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRegis"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/logo_biru_tua"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/btn_regis"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:cornerRadius="14dp" />
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
-            <!-- 2. Email (Diisi otomatis dari Register With Gmail) -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
-                app:strokeWidth="1dp">
-
-                <EditText
-                    android:id="@+id/etEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:background="@null"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="@string/hint_email"
-                    android:inputType="textEmailAddress"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="@color/text_black"
-                    android:textColorHint="@color/text_gray"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- 3. Username -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
-                app:strokeWidth="1dp">
-
-                <EditText
-                    android:id="@+id/etUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:background="@null"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="Username"
-                    android:inputType="textPersonName"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="@color/text_black"
-                    android:textColorHint="@color/text_gray"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- 4. Password -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                app:cardBackgroundColor="@color/biru_muda"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
-                app:strokeColor="@color/abu_muda"
-                app:strokeWidth="1dp">
-
-                <EditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:background="@null"
-                    android:fontFamily="@font/poppins_regular"
-                    android:hint="@string/hint_password"
-                    android:inputType="textPassword"
-                    android:paddingHorizontal="16dp"
-                    android:textColor="@color/text_black"
-                    android:textColorHint="@color/text_gray"
-                    android:textSize="14sp" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Tombol Registrasi -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRegis"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="22dp"
-                android:backgroundTint="@color/primary_blue"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/btn_regis"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                app:cornerRadius="14dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -183,12 +222,12 @@
                     android:id="@+id/tvToLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/poppins_bold"
                     android:padding="4dp"
                     android:text="@string/to_login"
-                    android:textColor="@color/primary_blue"
+                    android:textColor="@color/logo_biru_tua"
                     android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Warna Dasar-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Warna Lama -->
     <color name="pink_utama">#FFF0F5</color>
     <color name="tombol_utama">#FF69B4</color>
     <color name="pink_judul">#8B0042</color>
     <color name="pink_kotak_gizi">#FFE4E1</color>
     <color name="abu_teks">#4A4A4A</color>
 
-    <color name="primary_blue">#3E97FF</color>
-    <color name="primary_cyan">#19D3DA</color>
-    <color name="abu_muda">#E5E7EB</color>
-    <color name="biru_muda">#E8F4FF</color>
-    <color name="text_black">#1A1A1A</color>
-    <color name="text_gray">#6B7280</color>
-    <color name="logo_biru_tua">#0B4F9E</color>
+    <!-- WARNA UTAMA GRAND DESIGN  -->
+    <!-- Degradado Azul: Gradasi Cyan (#00E4DB) ke Biru (#0088D3) -->
+    <color name="primary_cyan">#00E4DB</color>
+    <color name="primary_blue">#0088D3</color>
+
+    <!-- p (Abu Muda): Garis pemisah, border & elemen non-aktif -->
+    <color name="abu_muda">#D8D8D8</color>
+
+    <!-- Elements (Biru Muda): Latar kartu ringan, input & chip -->
+    <color name="biru_muda">#EBF7FC</color>
+
+    <!-- Text 2 (Hitam Pekat): Judul, nama barang, angka stok & label penting -->
+    <color name="text_black">#232329</color>
+
+    <!-- Warna Pendukung & Makna Warna Logo Palmventory -->
+    <color name="text_gray">#64748B</color>
+    <color name="logo_biru_tua">#00659E</color>
     <color name="logo_hijau">#2E9E4F</color>
     <color name="logo_krem">#F3E3C3</color>
     <color name="logo_oranye">#F28C28</color>
 
-<!--    warna slide info-->
-    <color name="bg_slide1">#EAF4FF</color>
-    <color name="stroke_slide1">#CFE4FF</color>
+    <!-- WARNA SLIDE INFO  -->
+    <color name="bg_slide1">#EBF7FC</color>
+    <color name="stroke_slide1">#C4E8F7</color>
 
-    <color name="bg_slide2">#E6F7FA</color>
-    <color name="stroke_slide2">#C2ECF3</color>
-    <color name="accent_slide2">#00838F</color>
-    <color name="badge_slide2">#D0F0F5</color>
+    <color name="bg_slide2">#E3FAF9</color>
+    <color name="stroke_slide2">#B3F0ED</color>
+    <color name="accent_slide2">#0088D3</color>
+    <color name="badge_slide2">#CCF6F4</color>
 
-    <color name="bg_slide3">#EEF1FF</color>
-    <color name="stroke_slide3">#D4DCFF</color>
-    <color name="accent_slide3">#283593</color>
-    <color name="badge_slide3">#DCE2FF</color>
+    <color name="bg_slide3">#EAF4FC</color>
+    <color name="stroke_slide3">#C5E2F8</color>
+    <color name="accent_slide3">#00659E</color>
+    <color name="badge_slide3">#D8EEFA</color>
 
-
+    <!-- WARNA DASHBOARD & MOTIF HALAMAN -->
+    <color name="bg_dashboard">#F4FBFE</color>
+    <color name="hero_motif_circle">#24FFFFFF</color>
+    <color name="motif_bg_halaman">#D6F0FA</color>
 </resources>

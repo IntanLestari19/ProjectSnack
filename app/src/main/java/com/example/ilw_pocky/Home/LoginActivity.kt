@@ -2,7 +2,6 @@ package com.example.ilw_pocky.Home
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ilw_pocky.BaseActivity
 import com.example.ilw_pocky.R
@@ -22,8 +21,8 @@ class LoginActivity : AppCompatActivity() {
         supportActionBar?.apply {
             title = getString(R.string.title_login)
             subtitle = getString(R.string.app_sawit)
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
+            setDisplayHomeAsUpEnabled(false)
+            setDisplayShowHomeEnabled(false)
         }
 
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
@@ -69,13 +68,5 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, RegisActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

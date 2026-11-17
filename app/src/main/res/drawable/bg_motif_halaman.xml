@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Lapisan Dasar Gradasi Biru Lembut -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="@color/bg_slide1"
+                android:endColor="@color/white"
+                android:startColor="@color/biru_muda"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Motif Lingkaran Besar Kanan Tengah -->
+    <item
+        android:width="320dp"
+        android:height="320dp"
+        android:gravity="center_vertical|end"
+        android:right="-130dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/motif_bg_halaman" />
+        </shape>
+    </item>
+
+    <!-- Motif Lingkaran Kiri Bawah -->
+    <item
+        android:width="280dp"
+        android:height="280dp"
+        android:bottom="-90dp"
+        android:gravity="bottom|start"
+        android:left="-110dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/motif_bg_halaman" />
+        </shape>
+    </item>
+
+    <!-- Motif Aksen Lingkaran Cincin (Outline) Kiri Tengah -->
+    <item
+        android:width="180dp"
+        android:height="180dp"
+        android:gravity="top|start"
+        android:left="-70dp"
+        android:top="230dp">
+        <shape android:shape="oval">
+            <stroke
+                android:width="18dp"
+                android:color="@color/motif_bg_halaman" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</layer-list>
